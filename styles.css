@@ -1,0 +1,58 @@
+body {
+    font-family: sans-serif;
+    background-color: goldenrod;
+    padding: 10px;
+}
+nav {
+    background-color: gold;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 65rem;
+    margin: auto;
+}
+nav table {
+    font-size: 1.2rem;
+}
+nav table td {
+    padding: 10px;
+    align-content: center;
+}
+header {
+    text-align: center;
+    background-color: yellow;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 65rem;
+    margin: auto;
+    margin-top: 10px;
+}
+header h1 {
+    color: red;
+}
+main {
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 65rem;
+    margin: auto;
+    margin-top: 10px;
+}
+a {
+    color: blue;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    color: red;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+a:visited {
+    color: rebeccapurple;
+}
+nav a:visited {
+    color: blue;
+}
