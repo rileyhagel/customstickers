@@ -56,3 +56,8 @@ a:visited {
 nav a:visited {
     color: blue;
 }
+.logo {
+    color: red;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
