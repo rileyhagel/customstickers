@@ -37,7 +37,56 @@
             </small>
         </header>
         <main>
-            Coming Soon!
+            <form>
+                <h2>Step 1: Choose an Image</h2>
+                <label>
+                    <input type="file" id="file" accept="image/*" required>
+                    <br>
+                    <img src="../no-img.png" alt="Uploaded Image" title="Uploaded image" id="prev" width="320">
+                </label>
+                
+                <h2>Step 2: Choose Sticker Style</h2>
+                <label>
+                    <input type="radio" name="style" value="Trimmed" required>
+                    Hand-Trimmed to fit logo @ + $0.50 each
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="style" value="Square" required>
+                    Square @ + $0.00 each
+                </label>
+                
+                <h2>Step 3: Choose Sticker Quantity</h2>
+                <label>
+                    Quantity: 
+                    <select name="quantity" required>
+                        <option value="5">5 @ $0.20 each</option>
+                        <option value="10">10 @ $0.20 each</option>
+                        <option value="20">20 @ $0.15 each</option>
+                        <option value="50">50 @ $0.15 each</option>
+                        <option value="100">100 @ $0.10 each</option>
+                    </select>
+                </label>
+                
+                <h2>Step 4:</h2>
+            </form>
         </main>
     </body>
+    <script>
+        const fileInput = document.getElementById('file');
+        const preview = document.getElementById('prev');
+        
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            
+            reader.onload = () => {
+                const base64String = reader.result;
+                // console.log(base64String); // Contains data:[MIME type];base64,[data]
+                preview.src = base64String;
+            };
+        
+            reader.readAsDataURL(file);
+        });
+    </script>
 </html>
